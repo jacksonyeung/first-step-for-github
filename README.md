@@ -8,23 +8,7 @@ This article would share the experience for setting up your first repository by 
 
 ## Contents
 
-[1. $ git clone](1. $ git clone)
 
-​	[1.1 Clone with HTTPS](1.1 Clone with HTTPS)
-
-​	[1.2 Clone with SSH](1.2 Clone with SSH)
-
-​		[1.2.1 Generate SSH Key](1.2.1 Generate SSH Key)
-
-​		[1.2.2 Adding your SSH key to the ssh-agent](1.2.2 Adding your SSH key to the ssh-agent)
-
-​		[1.2.3 Adding a new SSH key to your GitHub account](1.2.3 Adding a new SSH key to your GitHub account)
-
-[2. Build a work group](2. Build a work group)
-
-​	[2.1 By HTTPS](2.1 By HTTPS)
-
-​	[2.2 By SSH-Keys](2.2 By SSH-Keys)
 
 
 
@@ -141,7 +125,7 @@ Remember, every time you wanna push your code to the remote branch, please alway
 $ git pull
 ```
 
-If there is no conflict file, it would pull successfully and please just go to watch [3.6 $ git add](3.6 $ git add)
+If there is no conflict file, it would pull successfully and please just go to watch 3.6.
 
 Or you will see below message: "Please commit your changes or stash them before you merge."
 
@@ -179,7 +163,7 @@ $ git stash pop
 
 If there is no conflict, or it means that you and your teammates didn't make any change on one same file. Then you can just follow the step .
 
-Or unfortunately, there are one or more conflicting files, then you need to solve the conflict(s) manually. Please go to [3.5 Solve Conflict](3.5 Solve Conflict)
+Or unfortunately, there are one or more conflicting files, then you need to solve the conflict(s) manually. Please go to 3.5.
 
 ### 3.5 Resolve Conflict
 
@@ -206,4 +190,3 @@ $ git commit -m "your remark"
 ```bash
 $ git push
 ```
-
