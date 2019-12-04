@@ -14,9 +14,9 @@ Below would introduce 2 different ways to clone the remote repositories.
 
 You can clone any open-source repositories into your local workspace directly without any checking.
 
-![image-20191204173857551](D:\Workspace\git-command-guide\images\image-20191204173857551.png)
+![image-20191204173857551](/images/image-20191204173857551.png)
 
-![](D:\Workspace\git-command-guide\images\image-20191204152322646.png)
+![image-20191204152322646](/images/image-20191204152322646.png)
 
 Check the folder where you used 'Git Bash Here', you successfully cloned the remote repository into your local drive.
 
@@ -26,7 +26,7 @@ Check the folder where you used 'Git Bash Here', you successfully cloned the rem
 
 Let's try this command directly.
 
-![image-20191204153416233](D:\Workspace\git-command-guide\images\image-20191204153416233.png)
+![image-20191204153416233](/images/image-20191204153416233.png)
 
 Check the note, it pops '**Permission denied**' due to you don't have the public SSH key.
 
@@ -50,11 +50,11 @@ for more detail, you can use the below command to check all the meanings of argu
 $ ssh-keygen help
 ```
 
-![image-20191204171611847](D:\Workspace\git-command-guide\images\image-20191204171611847.png)
+![image-20191204171611847](/images/image-20191204171611847.png)
 
 After ran the generating script, you would see:
 
-![image-20191204172503296](D:\Workspace\git-command-guide\images\image-20191204172503296.png)
+![image-20191204172503296](/images/image-20191204172503296.png)
 
 #### 2.2 Adding your SSH key to the ssh-agent
 
