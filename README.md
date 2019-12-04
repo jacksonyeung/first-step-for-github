@@ -1,10 +1,8 @@
-# Git Command
+# Git for First Step
 
-This article would share the experience for the 2 types of cloning the remote repositories (Https & SSH-Key).
+This article would share the experience for setting up your first repository by 2 types of cloning methods, Https and SSH-Key. And how to share the remote repositories to your friends or colleagues.
 
-And how to share the remote repositories to your friends or colleagues.
-
-
+(For following this article, you need to create your remote repository in GitHub first.)
 
 ## 1. $ git clone
 
@@ -89,4 +87,3 @@ If you want your friends to be your collaborators, you can go to setting and add
 ### 2.2 By SSH-Keys
 
 Please refer to the official guide: [Git-on-the-Server-Setting-Up-the-Server](https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server)
-
