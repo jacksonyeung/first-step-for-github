@@ -32,6 +32,8 @@ Check the folder where you used 'Git Bash Here', you successfully cloned the rem
 
 Let's try this command directly.
 
+![image-20191204205138761](/images/image-20191204205138761.png)
+
 ![image-20191204153416233](/images/image-20191204153416233.png)
 
 Check the note, it poped '**Permission denied**' due to you don't have the public SSH key.
