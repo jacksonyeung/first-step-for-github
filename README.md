@@ -1,4 +1,4 @@
-# Guide for Your First Repository
+# Practical Guide for Git
 
 This is not an advanced but really practical guide of git for the developer who has already grasped some basic knowledge and skill for git. It would almost satisfy for your common development.
 
