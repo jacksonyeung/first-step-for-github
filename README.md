@@ -1,16 +1,26 @@
 # Guide for Your First Repository
 
-This article would share the experience for setting up your first repository by 2 types of cloning methods, Https and SSH-Key. And how to share the remote repositories to your friends or colleagues.
+This is not an advanced but really practical guide of git for the developer who has already grasped some basic knowledge and skill for git. It would almost satisfy for your common development.
 
-(For following this article, you need to create your remote repository in GitHub first.)
+(i.e.: For following below steps, you need to create your remote repository in GitHub first.)
+
+According to this article, you might get:
+
+1. How to set up your first repository by Https or SSH-Key
+
+2. How to share the remote repositories to your friends or colleagues
+
+3. Use stash-commit rather than commit-merge (Recommended for Team Cooperation)
+
+4. Create branch, switch branch and merge from other branch
+
+5. Rollback your added request, your committed request and even push request
 
 
 
 ## Contents
 
-- Added by branch, dev.
-
-- Test rollback --mixed.
+Pending...
 
 
 
@@ -103,23 +113,21 @@ Please refer to the official guide: [Git-on-the-Server-Setting-Up-the-Server](ht
 
 
 
-## 3. Push to Remote Repository (Team)
+## 3. Stash-Commit
 
 Here I want to share a really good method to push your code from local to remote repository while you are developing in a **team**. 
 
 **Optimal Situation (No Changes in Remote Branch):**
 
-**3.1~>3.6~>3.7~>3.8**
+3.1~>3.6~>3.7~>3.8
 
 **General Situation (Changed in Remote Branch without Conflict):**
 
-**3.1~>3.2~>3.3~>3.4~>3.6~>3.7~>3.8**
+3.1~>3.2~>3.3~>3.4~>3.6~>3.7~>3.8
 
 **Worst Situation (Changed in Remote Branch with Conflict):**
 
-**3.1~>3.2~>3.3~>3.4~>3.5~>3.6~>3.7~>3.8**
-
-
+3.1~>3.2~>3.3~>3.4~>3.5~>3.6~>3.7~>3.8
 
 ### 3.1 $ git pull (first time)
 
@@ -194,3 +202,33 @@ $ git commit -m "your remark"
 ```bash
 $ git push
 ```
+
+
+
+## 4. Create, Switch and Merge Branch
+
+### 4.1 Create New Branch
+
+
+
+### 4.2 Switch to Other Branch
+
+
+
+### 4.3 Merge from Other Branch
+
+
+
+## 5. Rollback (Add, Commit and Push)
+
+### 5.1 Rollback Add Request
+
+
+
+### 5.2 Rollback Commit Request
+
+
+
+### 5.3 Rollback Pushed Request
+
+ 
