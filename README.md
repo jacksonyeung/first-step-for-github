@@ -1,4 +1,4 @@
-# Git for First Step
+# Guide for Your First Repository
 
 This article would share the experience for setting up your first repository by 2 types of cloning methods, Https and SSH-Key. And how to share the remote repositories to your friends or colleagues.
 
