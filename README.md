@@ -34,9 +34,9 @@ Below would introduce 2 different ways to clone the remote repositories.
 
 You can clone any open-source repositories into your local workspace directly without any checking.
 
-![image-20191204173857551](/images/image-20191204173857551.png)
+![image-20191204173857551](./images/image-20191204173857551.png)
 
-![image-20191204152322646](/images/image-20191204152322646.png)
+![image-20191204152322646](./images/image-20191204152322646.png)
 
 Check the folder where you used 'Git Bash Here', you successfully cloned the remote repository into your local drive.
 
@@ -48,7 +48,7 @@ Let's try this command directly.
 
 ![image-20191204205138761](/images/image-20191204205138761.png)
 
-![image-20191204153416233](/images/image-20191204153416233.png)
+![image-20191204153416233](./images/image-20191204153416233.png)
 
 Check the note, it poped '**Permission denied**' due to you don't have the public SSH key.
 
@@ -72,11 +72,11 @@ for more detail, you can use the below command to check all the meanings of argu
 $ ssh-keygen help
 ```
 
-![image-20191204171611847](/images/image-20191204171611847.png)
+![image-20191204171611847](./images/image-20191204171611847.png)
 
 After ran the generating script, you would see:
 
-![image-20191204172503296](/images/image-20191204172503296.png)
+![image-20191204172503296](./images/image-20191204172503296.png)
 
 #### 1.2.2 Adding your SSH key to the ssh-agent
 
@@ -106,7 +106,7 @@ Please refer to the official guide from: [adding-a-new-ssh-key-to-your-github-ac
 
 If you want your friends to be your collaborators, you can go to setting and add your friend in. Once he/she wanna do some commands, he/she just needs to login with his/her account.
 
-![image-20191204180211034](/images/image-20191204180211034.png)
+![image-20191204180211034](./images/image-20191204180211034.png)
 
 ### 2.2 By SSH-Keys
 
@@ -143,7 +143,7 @@ If there is no conflict file, it would pull successfully and please just go to w
 
 Or you will see below message: "Please commit your changes or stash them before you merge."
 
-![image-20191204200439027](/images/image-20191204200439027.png)
+![image-20191204200439027](./images/image-20191204200439027.png)
 
 Here I suggest you use stash to solve the conflict rather than commit. If you choose commit, it is actually a commit-merge action and sometimes would cause override other one's commit. For using stash could minimalize the cost while solving conflict. It is just like, you are always doing the develop based on the latest version of this branch.
 
@@ -155,7 +155,7 @@ This command would help to stash your changes into a liked buffer area. You can 
 $ git stash
 ```
 
-![image-20191204202340471](/images/image-20191204202340471.png)
+![image-20191204202340471](./images/image-20191204202340471.png)
 
 ### 3.3 $ git pull (second time)
 
@@ -165,7 +165,7 @@ After stashing your local changes, now your local repository is in a clean versi
 $ git pull
 ```
 
-![image-20191204202728538](/images/image-20191204202728538.png)
+![image-20191204202728538](./images/image-20191204202728538.png)
 
 ### 3.4 $ git stash pop
 
@@ -183,7 +183,7 @@ Or unfortunately, there are one or more conflicting files, then you need to solv
 
 Checked the conflicted file, you would find some symbols like "<<<<<<", they are conflicting area. Please solve the conflict carefully.
 
-![image-20191204203510626](/images/image-20191204203510626.png)
+![image-20191204203510626](./images/image-20191204203510626.png)
 
 ### 3.6 $ git add
 
@@ -239,11 +239,11 @@ $ git merge --no-ff uat
 
 With `--no-ff`, create a merge commit in all cases, even when the merge could instead be resolved as a fast-forward.
 
-![image-20191205115731977](/images/image-20191205115731977.png)
+![image-20191205115731977](./images/image-20191205115731977.png)
 
 Check the history, you would see a merged record by "**--no-ff**":
 
-![image-20191205115937448](/images/image-20191205115937448.png)
+![image-20191205115937448](./images/image-20191205115937448.png)
 
 ## 5. Rollback (Add, Commit and Push)
 
@@ -251,7 +251,7 @@ While working, we might wrongly add, commit or push some files. Then we need to 
 
 Here we have some new and some changed files.
 
-![image-20191205174505275](/images/image-20191205174505275.png)
+![image-20191205174505275](./images/image-20191205174505275.png)
 
 ### 5.1 Rollback Add Request
 
@@ -261,7 +261,7 @@ Add them all:
 $ git add -A
 ```
 
-![image-20191205174551926](/images/image-20191205174551926.png)
+![image-20191205174551926](./images/image-20191205174551926.png)
 
 And you can easily find the note, "**(use "git restore --staged <file>..." to unstage)**". Let's just follow the note and rollback them.
 
@@ -269,13 +269,13 @@ And you can easily find the note, "**(use "git restore --staged <file>..." to un
 $ git restore --staged *
 ```
 
-![image-20191205174836453](/images/image-20191205174836453.png)
+![image-20191205174836453](./images/image-20191205174836453.png)
 
 ### 5.2 Rollback Commit Request
 
 Let's add them back then commit them and check the current status.
 
-![image-20191205175518842](D:\Workspace\practical-guide-for-git\images\image-20191205175518842.png)
+![image-20191205175518842](./images/image-20191205175518842.png)
 
 We can use below command to rollback committed request:
 
@@ -283,7 +283,7 @@ We can use below command to rollback committed request:
 $ git reset --mixed head^
 ```
 
-![image-20191205175719462](/images/image-20191205175719462.png)
+![image-20191205175719462](./images/image-20191205175719462.png)
 
 Now they are become unstaged and untracked files again. **And actually, the command could also apply on rollback added request.**
 
@@ -336,6 +336,24 @@ Please push to the remote branch carefully and avoid doing this step frequently.
 
 Firstly, let's push a commit for test.
 
+![image-20191205232242552](./images/image-20191205232242552.png)
 
+ Secondly, let's try reset to the last commit before the test data. Of course you can rollback to any commits. Please follow the git reset command.
 
- 
+```bash
+$ git reset --hard HEAD^
+```
+
+![image-20191205232745811](./images/image-20191205232745811.png)
+
+And if you just use git push, it would remind you updates were rejected due to the current version number is behind the remote one. Then you should use below command to force it to push.
+
+```bash
+$ git push origin master --force
+```
+
+![image-20191205233149641](./images/image-20191205233149641.png)
+
+Let's check the history, it delete the commit and stay the commit you rollback to.
+
+![image-20191205233342564](./images/image-20191205233342564.png)
