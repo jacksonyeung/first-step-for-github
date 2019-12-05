@@ -332,6 +332,10 @@ $ git reset --help
 
 ### 5.3 Rollback Pushed Request
 
+Please push to the remote branch carefully and avoid doing this step frequently.
+
+Firstly, let's push a commit for test.
+
 
 
  
