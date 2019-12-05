@@ -205,17 +205,31 @@ $ git push
 
 
 
-## 4. Create, Switch and Merge Branch
+## 4. Create, Switch and Merge New Branch
 
 ### 4.1 Create New Branch
 
-
+```bash
+$ git branch uat
+```
 
 ### 4.2 Switch to Other Branch
 
+```bash
+$ git checkout uat
+```
+
+### 4.3 Push to New Branch
+
+When you checkout to the new branch and you want to do a push command, it would remind you to use command to push:
+
+```bash
+$ git push --set-upstream origin uat
+```
+
+### 4.4 Merge from New Branch
 
 
-### 4.3 Merge from Other Branch
 
 
 
