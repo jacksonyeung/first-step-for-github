@@ -4,6 +4,8 @@ This is not an advanced but really practical guide of git for the developer who 
 
 (i.e.: For following below steps, you need to create your remote repository in GitHub first.)
 
+
+
 According to this article, you might get:
 
 1. How to set up your first repository by Https or SSH-Key
@@ -115,7 +117,7 @@ Please refer to the official guide: [Git-on-the-Server-Setting-Up-the-Server](ht
 
 ## 3. Stash-Commit
 
-Here I want to share a really good method to push your code from local to remote repository while you are developing in a **team**. 
+For personal use, you can ignore this phase. But if you are working within a group or team, you would be better to try stash-commit. Do not think it is more complicated, it would actually help you to reduce the cost for resolving conflict, it would be more efficient!
 
 **Optimal Situation (No Changes in Remote Branch):**
 
@@ -219,30 +221,117 @@ $ git branch uat
 $ git checkout uat
 ```
 
-### 4.3 Push to New Branch
+### 4.3 Push the New Branch to Remote Repository
 
-When you checkout to the new branch and you want to do a push command, it would remind you to use command to push:
+You need to do a push command to remote repository, then the new branch would be effective to others.
+
+While you are pushing, it would remind you to use below command to push (just follow the notes) :
 
 ```bash
 $ git push --set-upstream origin uat
 ```
 
-### 4.4 Merge from New Branch
+### 4.4 Merge from New/Old Branch
 
+```bash
+$ git merge --no-ff uat
+```
 
+With `--no-ff`, create a merge commit in all cases, even when the merge could instead be resolved as a fast-forward.
 
+![image-20191205115731977](/images/image-20191205115731977.png)
 
+Check the history, you would see a merged record by "**--no-ff**":
+
+![image-20191205115937448](/images/image-20191205115937448.png)
 
 ## 5. Rollback (Add, Commit and Push)
 
+While working, we might wrongly add, commit or push some files. Then we need to know how to rollback them.
+
+Here we have some new and some changed files.
+
+![image-20191205174505275](/images/image-20191205174505275.png)
+
 ### 5.1 Rollback Add Request
 
+Add them all:
 
+```bash
+$ git add -A
+```
+
+![image-20191205174551926](/images/image-20191205174551926.png)
+
+And you can easily find the note, "**(use "git restore --staged <file>..." to unstage)**". Let's just follow the note and rollback them.
+
+```bash
+$ git restore --staged *
+```
+
+![image-20191205174836453](/images/image-20191205174836453.png)
 
 ### 5.2 Rollback Commit Request
 
+Let's add them back then commit them and check the current status.
 
+![image-20191205175518842](D:\Workspace\practical-guide-for-git\images\image-20191205175518842.png)
+
+We can use below command to rollback committed request:
+
+```bash
+$ git reset --mixed head^
+```
+
+![image-20191205175719462](/images/image-20191205175719462.png)
+
+Now they are become unstaged and untracked files again. **And actually, the command could also apply on rollback added request.**
+
+For the above command:
+
+```bash
+$ git reset [--soft | --mixed [-N] | --hard | --merge | --keep] [-q] [<commit>]
+```
+
+[mode]
+
+***
+
+**--soft**
+Does not touch the index file or the working tree at all (but resets the head to <commit>, just like all modes do). This leaves all your changed files "Changes to be committed", as git status would put it.
+
+**--mixed**
+Resets the index but not the working tree (i.e., the changed files are preserved but not marked for commit) and reports what has not been updated. This is the default action.
+
+If -N is specified, removed paths are marked as intent-to-add (see git-add(1)).
+
+**--hard**
+Resets the index and working tree. Any changes to tracked files in the working tree since <commit> are discarded.
+
+[commit]
+
+***
+
+**Head^**
+
+Rewind the branch to the last commit
+
+**Head~3**
+
+Rewind the branch to get rid of those 3 commits.
+
+**commit-id**
+
+Rewind the branch to one specific commit
+
+For further information, you could use below command,
+
+```bash
+$ git reset --help
+```
 
 ### 5.3 Rollback Pushed Request
+
+
 
  
