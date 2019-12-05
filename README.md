@@ -119,17 +119,21 @@ Please refer to the official guide: [Git-on-the-Server-Setting-Up-the-Server](ht
 
 For personal use, you can ignore this phase. But if you are working within a group or team, you would be better to try stash-commit. Do not think it is more complicated, it would actually help you to reduce the cost for resolving conflict, it would be more efficient!
 
-**Optimal Situation (No Changes in Remote Branch):**
-
-3.1~>3.6~>3.7~>3.8
-
-**General Situation (Changed in Remote Branch without Conflict):**
-
-3.1~>3.2~>3.3~>3.4~>3.6~>3.7~>3.8
-
-**Worst Situation (Changed in Remote Branch with Conflict):**
-
-3.1~>3.2~>3.3~>3.4~>3.5~>3.6~>3.7~>3.8
+```mermaid
+graph LR
+	Start --> pull
+	pull --> conflict1{conflict?}
+	conflict1 --Yes--> stash
+	stash --> pull2[pull]
+	pull2 --> stashPop[stash pop]
+	stashPop --> conflict2{conflict?}
+	conflict2 --yes--> solve[solve conflict]
+	conflict2 --no--> add
+	solve --> add
+	conflict1 --No--> add
+	add --> commit --> push
+	
+```
 
 ### 3.1 $ git pull (first time)
 
