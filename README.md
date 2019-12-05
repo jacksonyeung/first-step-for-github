@@ -120,6 +120,8 @@ Please refer to the official guide: [Git-on-the-Server-Setting-Up-the-Server](ht
 For personal use, you can ignore this phase. But if you are working within a group or team, you would be better to try stash-commit. Do not think it is more complicated, it would actually help you to reduce the cost for resolving conflict, it would be more efficient!
 
 ```mermaid
+<script src="mermaid.full.min.js"></script>
+<div class="mermaid">
 graph LR
 	Start --> pull
 	pull --> conflict1{conflict?}
@@ -132,6 +134,7 @@ graph LR
 	solve --> add
 	conflict1 --No--> add
 	add --> commit --> push
+</div>
 	
 ```
 
